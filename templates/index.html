@@ -104,10 +104,88 @@
         background: var(--color-accent);
         width: 40px;
       }
+      .header-section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      li {
+        list-style: none;
+      }
+      nav ul {
+        display: flex;
+        gap: 10px;
+      }
+      .header-section input {
+        display: none;
+      }
+
+      .header-section span {
+        width: 20px;
+        height: 2px;
+        background-color: var(--color-accent);
+        display: block;
+        border-radius: var(--border-radius);
+        position: relative;
+      }
+      .header-section span:nth-child(1) {
+        top: 0;
+      }
+      .header-section span:nth-child(2) {
+        top: 6px;
+      }
+      .header-section .menu {
+        display: none;
+      }
+
+      @media (max-width: 700px) {
+        .header-section .menu {
+          display: block;
+          cursor: pointer;
+        }
+
+        nav {
+          display: none;
+        }
+
+        #menu:checked ~ nav {
+          display: block;
+          position: absolute;
+          top: 30px;
+          right: 10px;
+          background: white;
+          padding: 15px;
+          border-radius: var(--border-radius);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          z-index: 100;
+        }
+
+        nav ul {
+          flex-direction: column;
+        }
+      }
     </style>
   </head>
   <body>
-    <header></header>
+    <header class="header-section">
+      <div class="">ЛОГО</div>
+      <div class="">
+        <input type="checkbox" name="menu" id="menu" />
+        <label for="menu" class="menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <nav>
+          <ul>
+            <li>link 1</li>
+            <li>link 2</li>
+            <li>link 3</li>
+          </ul>
+        </nav>
+      </div>
+    </header>
     <main>
       <section id="slider-section">
         <div class="slider">

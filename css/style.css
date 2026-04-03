@@ -1,8 +1,8 @@
-@import url("./slider.css");
 :root {
   --color-accent: #c31011;
   --width-slider: min(90vw, 800px);
   --border-radius: 15px;
+  --slider-width: min(90vw, 800px);
 }
 
 * {
@@ -19,64 +19,55 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.header-section {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 li {
   list-style: none;
 }
-nav ul {
-  display: flex;
-  gap: 10px;
-}
-.header-section input {
-  display: none;
+
+.container {
+  max-width: 1180px;
+  margin: 0 auto;
 }
 
-.header-section span {
-  width: 20px;
-  height: 2px;
+a {
+  text-decoration: none;
+}
+
+button {
+  padding: 0.7em 1.4em;
+  border-radius: calc(infinity * 1px);
+  border: none;
+}
+button:hover {
+  background-color: rgb(230, 230, 230);
+}
+
+.btn-main,
+.btn-main:hover {
   background-color: var(--color-accent);
-  display: block;
-  border-radius: var(--border-radius);
-  position: relative;
+  color: white;
 }
-.header-section span:nth-child(1) {
-  top: 0;
+a:hover {
+  color: var(--color-accent);
 }
-.header-section span:nth-child(2) {
-  top: 6px;
-}
-.header-section .menu {
-  display: none;
+input {
+  padding: 0.7em 1.4em;
+  border-radius: calc(infinity * 1px);
+  border: none;
+  outline: none;
+  border: 1px solid rgb(211, 211, 211);
+  width: 100%;
 }
 
-@media (max-width: 700px) {
-  .header-section .menu {
-    display: block;
-    cursor: pointer;
-  }
+section {
+  margin-bottom: 5rem;
+}
 
-  nav {
-    display: none;
-  }
+.star {
+  color: gold;
+  font-size: 30px;
+}
 
-  #menu:checked ~ nav {
-    display: block;
-    position: absolute;
-    top: 30px;
-    right: 10px;
-    background: white;
-    padding: 15px;
-    border-radius: var(--border-radius);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    z-index: 100;
-  }
-
-  nav ul {
-    flex-direction: column;
-  }
+.secondary {
+  color: gray;
+  font-size: 14px;
 }

@@ -3,72 +3,170 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Главная страница</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
-    <header class="header-section">
-      <div class="">ЛОГО</div>
-      <div class="">
-        <input type="checkbox" name="menu" id="menu" />
-        <label for="menu" class="menu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </label>
-        <nav>
-          <ul>
-            <li>link 1</li>
-            <li>link 2</li>
-            <li>link 3</li>
-          </ul>
-        </nav>
+    <header>
+      <div class="container">
+        <div id="logo">LOGO</div>
+        <div id="main-nav">
+          <input type="checkbox" name="burger" id="burger" />
+          <label for="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+          <nav>
+            <ul>
+              <li id="go-to-search">
+                <a href="#go-to-search">Поиск достопримечательностей</a>
+              </li>
+              <li id="nav-profile">
+                <a href="./html/profile.html">Личный кабинет</a>
+              </li>
+              <li id="nav-catalog">
+                <a href="./html/catalog.html">Каталог достопримечательностей</a>
+              </li>
+              <li id="nav-login">
+                <a href="/login">
+                  <button>Войти</button>
+                </a>
+              </li>
+              <li id="nav-register">
+                <a href="/register">
+                  <button class="btn-main">Регистрация</button>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
     <main>
-      <section id="slider-section">
-        <div class="slider">
-          <input type="radio" name="slide" id="s1" checked />
-          <input type="radio" name="slide" id="s2" />
-          <input type="radio" name="slide" id="s3" />
-          <input type="radio" name="slide" id="s4" />
-
-          <div class="slides">
-            <div class="slide">
-              <img src="./img/orig.jpg" />
-              <div class="text">
-                <h2>Гора Полковник</h2>
-                <p>Живописная вершина с панорамными видами.</p>
+      <section id="search-section">
+        <div class="container">
+          <form action="">
+            <input
+              type="search"
+              name="search-input"
+              id="search-input"
+              placeholder="Памятники архитектуры"
+            />
+            <button id="search-button" class="btn-main">Найти</button>
+          </form>
+        </div>
+      </section>
+      <section id="advantages-section">
+        <div class="container">
+          <h1>Преимущества платформы</h1>
+          <ul>
+            <li>Удобная загрузка фотографий</li>
+            <li>Точные координаты на карте</li>
+            <li>Подробные описания от местных жителей</li>
+            <li>Актуальная информация и отзывы путешественников</li>
+          </ul>
+        </div>
+      </section>
+      <section id="popular-section">
+        <div class="container">
+          <h1>Популярные достопримечательности</h1>
+          <div class="popular-grid">
+            <div class="landmark-card">
+              <div class=""><img src="./img/orig.jpg" alt="" /></div>
+              <h2>Название</h2>
+              <p class="secondary">Памятник архитектуры</p>
+              <p>Автор 1</p>
+              <div class="star">
+                &starf;&starf;&starf; <span class="secondary">(4)</span>
               </div>
+              <a href="./html/landmark.html">
+                <button class="btn-main">Подробнее</button>
+              </a>
             </div>
-            <div class="slide">
-              <img src="./img/i.webp" />
-              <div class="text">
-                <h2>Соль-Илецк</h2>
-                <p>Известные солёные озёра для отдыха и лечения.</p>
+            <div class="landmark-card">
+              <div class=""><img src="./img/orig.jpg" alt="" /></div>
+              <h2>Название</h2>
+              <p class="secondary">Памятник архитектуры</p>
+              <p>Автор 1</p>
+              <div class="star">
+                &starf;&starf;&starf; <span class="secondary">(4)</span>
               </div>
+              <a href="./html/landmark.html">
+                <button class="btn-main">Подробнее</button>
+              </a>
             </div>
-            <div class="slide">
-              <img src="./img/i.webp" />
-              <div class="text">
-                <h2>Бузулукский бор</h2>
-                <p>Уникальный сосновый лес среди степей.</p>
+            <div class="landmark-card">
+              <div class=""><img src="./img/orig.jpg" alt="" /></div>
+              <h2>Название</h2>
+              <p class="secondary">Памятник архитектуры</p>
+              <p>Автор 1</p>
+              <div class="star">
+                &starf;&starf;&starf; <span class="secondary">(4)</span>
               </div>
+              <a href="./html/landmark.html">
+                <button class="btn-main">Подробнее</button>
+              </a>
             </div>
-            <div class="slide">
-              <img src="./img/i.webp" />
-              <div class="text">
-                <h2>Ириклинское водохранилище</h2>
-                <p>Популярное место для отдыха у воды.</p>
+            <div class="landmark-card">
+              <div class=""><img src="./img/orig.jpg" alt="" /></div>
+              <h2>Название</h2>
+              <p class="secondary">Памятник архитектуры</p>
+              <p>Автор 1</p>
+              <div class="star">
+                &starf;&starf;&starf; <span class="secondary">(4)</span>
               </div>
+              <a href="./html/landmark.html">
+                <button class="btn-main">Подробнее</button>
+              </a>
+            </div>
+            <div class="landmark-card">
+              <div class=""><img src="./img/orig.jpg" alt="" /></div>
+              <h2>Название</h2>
+              <p class="secondary">Памятник архитектуры</p>
+              <p>Автор 1</p>
+              <div class="star">
+                &starf;&starf;&starf; <span class="secondary">(4)</span>
+              </div>
+              <a href="./html/landmark.html">
+                <button class="btn-main">Подробнее</button>
+              </a>
             </div>
           </div>
-
-          <div class="nav">
-            <label for="s1"></label>
-            <label for="s2"></label>
-            <label for="s3"></label>
-            <label for="s4"></label>
+        </div>
+      </section>
+      <section id="slider-section">
+        <div class="">
+          <div class="slider">
+            <input type="radio" name="sld" id="s1" checked />
+            <input type="radio" name="sld" id="s2" />
+            <input type="radio" name="sld" id="s3" />
+            <div class="slides">
+              <div class="slide">
+                <img src="./img/orig.jpg" alt="" />
+                <div class="text">
+                  <h1>Текст</h1>
+                </div>
+              </div>
+              <div class="slide">
+                <img src="./img/orig.jpg" alt="" />
+                <div class="text">
+                  <h1>Текст</h1>
+                </div>
+              </div>
+              <div class="slide">
+                <img src="./img/orig.jpg" alt="" />
+                <div class="text">
+                  <h1>Текст</h1>
+                </div>
+              </div>
+            </div>
+            <div class="nav">
+              <label for="s1"></label>
+              <label for="s2"></label>
+              <label for="s3"></label>
+            </div>
           </div>
         </div>
       </section>
