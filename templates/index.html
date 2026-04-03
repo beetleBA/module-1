@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+        --color-accent: #c31011;
+        --width-slider: min(90vw, 800px);
+        --border-radius: 15px;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      img {
+        border-radius: var(--border-radius);
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      #slider-section {
+        max-width: var(--width-slider);
+        margin: auto;
+        overflow: hidden;
+      }
+
+      .slider input {
+        display: none;
+      }
+
+      .slides {
+        display: flex;
+        width: 400%;
+        transition: 0.8s;
+        gap: 10px;
+      }
+
+      .slide {
+        width: 100%;
+        position: relative;
+      }
+
+      .slide img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+
+        filter: brightness(0.7) contrast(1.1);
+      }
+
+      .text {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        color: white;
+        background: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(7px);
+        padding: 1.5rem;
+        margin: 1rem;
+        border-radius: var(--border-radius);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      #s1:checked ~ .slides {
+        transform: translateX(0);
+      }
+      #s2:checked ~ .slides {
+        transform: translateX(calc(var(--width-slider) * -1));
+      }
+      #s3:checked ~ .slides {
+        transform: translateX(calc(var(--width-slider) * -1 * 2));
+      }
+      #s4:checked ~ .slides {
+        transform: translateX(calc(var(--width-slider) * -1 * 3));
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+
+      .nav label {
+        width: 15px;
+        height: 15px;
+        background: gray;
+        cursor: pointer;
+        border-radius: var(--border-radius);
+        transition: width 0.1s ease-in;
+      }
+
+      #s1:checked ~ .nav label[for="s1"],
+      #s2:checked ~ .nav label[for="s2"],
+      #s3:checked ~ .nav label[for="s3"],
+      #s4:checked ~ .nav label[for="s4"] {
+        background: var(--color-accent);
+        width: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <section id="slider-section">
+        <div class="slider">
+          <input type="radio" name="slide" id="s1" checked />
+          <input type="radio" name="slide" id="s2" />
+          <input type="radio" name="slide" id="s3" />
+          <input type="radio" name="slide" id="s4" />
+
+          <div class="slides">
+            <div class="slide">
+              <img src="./img/orig.jpg" />
+              <div class="text">
+                <h2>Гора Полковник</h2>
+                <p>Живописная вершина с панорамными видами.</p>
+              </div>
+            </div>
+            <div class="slide">
+              <img src="./img/i.webp" />
+              <div class="text">
+                <h2>Соль-Илецк</h2>
+                <p>Известные солёные озёра для отдыха и лечения.</p>
+              </div>
+            </div>
+            <div class="slide">
+              <img src="./img/i.webp" />
+              <div class="text">
+                <h2>Бузулукский бор</h2>
+                <p>Уникальный сосновый лес среди степей.</p>
+              </div>
+            </div>
+            <div class="slide">
+              <img src="./img/i.webp" />
+              <div class="text">
+                <h2>Ириклинское водохранилище</h2>
+                <p>Популярное место для отдыха у воды.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="nav">
+            <label for="s1"></label>
+            <label for="s2"></label>
+            <label for="s3"></label>
+            <label for="s4"></label>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>

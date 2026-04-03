@@ -1,0 +1,20 @@
+@import url("./slider.css");
+:root {
+  --color-accent: #c31011;
+  --width-slider: min(90vw, 800px);
+  --border-radius: 15px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  border-radius: var(--border-radius);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
