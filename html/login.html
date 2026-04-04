@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Вход</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div id="logo" class="logo"><img src="../img/logo.png" alt="" /></div>
+        <div id="main-nav">
+          <input type="checkbox" name="burger" id="burger" />
+          <label for="burger" class="burger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+          <nav>
+            <ul>
+              <li id="go-to-serach">
+                <a href="">Поиск</a>
+              </li>
+              <li id="nav-catalog">
+                <a href="">Каталог</a>
+              </li>
+              <li id="nav-profile"><a href="">Личный кабинет</a></li>
+              <li>
+                <form>
+                  <button id="nav-login" class="btn" formaction="./login.html">
+                    Войти
+                  </button>
+                  <button
+                    class="btn-accent"
+                    id="nav-register"
+                    formaction="./register.html"
+                  >
+                    Регистрация
+                  </button>
+                </form>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container-center" id="login-form">
+        <h1>Вход</h1>
+        <form method="post">
+          <input
+            type="email"
+            name="login-email"
+            id="login-email"
+            placeholder="Email"
+          />
+          <input
+            type="password"
+            name="login-password"
+            id="login-password"
+            placeholder="Пароль"
+          />
+          <a href="#" id="forgot-password-link">Забыл пароль?</a>
+          <button class="btn-accent" id="login-submit">Войти</button>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

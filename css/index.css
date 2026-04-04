@@ -1,5 +1,5 @@
-header {
-  padding: 1rem 0;
+header .logo img {
+  width: 250px;
 }
 header li {
   list-style: none;
@@ -10,7 +10,7 @@ header input {
 header nav ul {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 30px;
 }
 header .container {
   display: flex;
@@ -89,7 +89,7 @@ header .container {
   gap: 20px;
 }
 .advantages-item {
-  border: var(--border);
+  border: 2px solid rgb(209, 209, 209);
   border-radius: var(--border-radius-15);
   padding: 2rem;
 }
@@ -102,24 +102,38 @@ header .container {
 .popular-items {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 }
+
 .popular-item {
   background-color: var(--color-white);
-  padding: 2rem;
   border-radius: var(--border-radius-15);
+}
+.popular-item .item-text {
+  padding: 0.5rem 1.5rem;
 
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 10px;
 }
 .popular-item img {
-  height: 300px;
+  height: 200px;
   width: 100%;
   object-fit: cover;
-  border-radius: var(--border-radius-15);
+  border-radius: var(--border-radius-15) var(--border-radius-15) 0 0;
 }
-
+.stars {
+  font-size: 20px;
+}
+.flex-btw {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.popular-item .tag {
+  margin: 5px 0;
+}
 .slider {
   max-width: var(--width-slider);
   overflow: hidden;
@@ -142,7 +156,7 @@ header .container {
 .sld-text {
   position: absolute;
   bottom: 0;
-  width: max(30vw, 200px);
+  width: min(30vw, 450px);
   margin: 1rem;
   backdrop-filter: blur(10px);
   background-color: rgba(0, 0, 0, 0.1);
@@ -185,12 +199,15 @@ header .container {
 }
 
 #partners-section .container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
   justify-content: center;
   gap: 1rem;
 }
-
+#partners-section img {
+  width: 100%;
+}
 footer .container {
   background-color: var(--color-accent-gray);
   padding: 2rem;
@@ -211,15 +228,29 @@ footer .contacts {
   padding: 2rem;
   border-radius: var(--border-radius-15);
   color: var(--color-accent-gray);
-  min-width: 400px;
 }
 footer .contacts a {
   color: var(--color-accent-gray);
-  display: block;
   padding-top: 0.5rem;
 }
 .footer-menu ul {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
+}
+@media (max-width: 1000px) {
+  .footer-menu {
+    display: block;
+  }
+  .footer-menu ul {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+footer .logo {
+  width: 200px;
+  filter: invert(100%);
+  margin-bottom: 1rem;
 }

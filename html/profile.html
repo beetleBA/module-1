@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Профиль</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div id="logo" class="logo"><img src="../img/logo.png" alt="" /></div>
+        <div id="main-nav">
+          <input type="checkbox" name="burger" id="burger" />
+          <label for="burger" class="burger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+          <nav>
+            <ul>
+              <li id="go-to-serach">
+                <a href="">Поиск</a>
+              </li>
+              <li id="nav-catalog">
+                <a href="">Каталог</a>
+              </li>
+              <li id="nav-profile"><a href="">Личный кабинет</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main id="profile-page">
+      <div class="container user-info-list">
+        <div id="user-info">
+          <h1>Личный кабинет</h1>
+          <div class="container-info">
+            <div class="items">
+              <p class="secondary">E-mail</p>
+              <p class="tag">user@user.ru</p>
+              <p class="secondary">Имя</p>
+              <h4>Иван</h4>
+              <p class="secondary">Фамилия</p>
+              <h4>Иванов</h4>
+              <p class="secondary">Дата рождения</p>
+              <p>12/12/2005</p>
+              <p class="secondary">Телефон</p>
+              <p>+7 (912) 980 99-44</p>
+            </div>
+          </div>
+          <div id="profile-settings">
+            <button class="btn" id="change-password-btn">Сменить пароль</button>
+            <div class="theme-switch-wrapper">
+              <p class="secondary">Изменить тему</p>
+              <label class="theme-switch" for="theme-toggle">
+                <input type="checkbox" id="theme-toggle" />
+                <div class="container-round round"></div>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div id="my-landmarks">
+          <p class="secondary">Мои достопримечательности (3)</p>
+          <div class="landmarks-items">
+            <div class="landmarks-item">
+              <div class="flex-btw">
+                <div>
+                  <div class="flex-btw">
+                    <h2>Название</h2>
+                    <p class="tag">На проверке</p>
+                  </div>
+                  <p class="secondary">23/02/2005</p>
+                </div>
+                <button class="btn">Редактировать</button>
+              </div>
+            </div>
+            <div class="landmarks-item">
+              <div class="flex-btw">
+                <div>
+                  <div class="flex-btw">
+                    <h2>Название</h2>
+                    <p class="tag">На проверке</p>
+                  </div>
+                  <p class="secondary">23/02/2005</p>
+                </div>
+                <button class="btn">Редактировать</button>
+              </div>
+            </div>
+            <div class="landmarks-item">
+              <div class="flex-btw">
+                <div>
+                  <div class="flex-btw">
+                    <h2>Название</h2>
+                    <p class="tag">На проверке</p>
+                  </div>
+                  <p class="secondary">23/02/2005</p>
+                </div>
+                <button class="btn">Редактировать</button>
+              </div>
+            </div>
+            <div class="landmarks-item">
+              <div class="flex-btw">
+                <div>
+                  <div class="flex-btw">
+                    <h2>Название</h2>
+                    <p class="tag">На проверке</p>
+                  </div>
+                  <p class="secondary">23/02/2005</p>
+                </div>
+                <button class="btn">Редактировать</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section id="add-landmark-form">
+        <div class="container">
+          <h1>Добавление достопримечательности</h1>
+          <form>
+            <input
+              type="text"
+              name="landmark-title"
+              id="landmark-title"
+              placeholder="Название достопримечательности"
+            />
+            <select name="landmark-category" id="landmark-category">
+              <option value="1">Памятник архитектуры</option>
+              <option value="2">Природный объект</option>
+              <option value="3">Музей</option>
+              <option value="4">Историческое место</option>
+              <option value="5">Религиозное сооружение</option>
+              <option value="6">Другое</option>
+            </select>
+            <select name="landmark-district" id="landmark-district">
+              <option value="1">Памятник архитектуры</option>
+            </select>
+            <textarea
+              name="landmark-description"
+              id="landmark-description"
+              placeholder="Описание достопримечательности"
+            ></textarea>
+            <input
+              type="number"
+              name="landmark-lat"
+              id="landmark-lng"
+              placeholder="Широта"
+            />
+            <input
+              type="number"
+              name="landmark-lat"
+              id="landmark-lng"
+              placeholder="Долгота"
+            />
+            <input
+              type="file"
+              name="landmark-images"
+              id="landmark-images"
+              multiple
+              accept="image/*"
+            />
+            <div>
+              <button class="btn-accent" id="landmark-submit">
+                Отправить на модерацию
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section>
+        <div class="container">
+          <h1>Каталог достопримечательностей</h1>
+          <div class="search-form">
+            <input
+              type="search"
+              name="search-input"
+              id="search-input"
+              placeholder="Памятники архитектуры, Природные объекты..."
+            />
+            <button class="btn-accent" id="search-button">Найти</button>
+          </div>
+          <div class="filter">
+            <input type="checkbox" name="filter-mobile" id="filter-mobile" />
+
+            <div class="filter-items">
+              <div class="filter-item">Памятники архитектуры</div>
+              <div class="filter-item">Природные объекты</div>
+              <div class="filter-item">Музеи</div>
+            </div>
+            <div class="filter-container">
+              <label class="filter-mobile" for="filter-mobile">
+                <span></span>
+                <span></span>
+                <span></span>
+              </label>
+              <span>Фильтр</span>
+            </div>
+          </div>
+          <div class="popular-items" id="landmark-card">
+            <div class="popular-item">
+              <img src="../img/orig.jpg" alt="" />
+
+              <div class="item-text">
+                <div>
+                  <h2>Название</h2>
+                  <p class="tag">Памятник архитектуры</p>
+                  <p>user@user.ru</p>
+                </div>
+                <div>
+                  <span class="stars">&starf;&starf;&starf;&starf;&starf;</span>
+                  (5)
+                  <p class="secondary">Район Оренбургской области</p>
+                </div>
+                <div class="flex-btw">
+                  <span>12 фото</span>
+                  <div><button class="btn">Подробнее</button></div>
+                </div>
+              </div>
+            </div>
+            <div class="popular-item">
+              <img src="../img/orig.jpg" alt="" />
+
+              <div class="item-text">
+                <div>
+                  <h2>Название</h2>
+                  <p class="tag">Памятник архитектуры</p>
+                  <p>user@user.ru</p>
+                </div>
+                <div>
+                  <span class="stars">&starf;&starf;&starf;&starf;&starf;</span>
+                  (5)
+                  <p class="secondary">Район Оренбургской области</p>
+                </div>
+                <div class="flex-btw">
+                  <span>12 фото</span>
+                  <div><button class="btn">Подробнее</button></div>
+                </div>
+              </div>
+            </div>
+            <div class="popular-item">
+              <img src="../img/orig.jpg" alt="" />
+
+              <div class="item-text">
+                <div>
+                  <h2>Название</h2>
+                  <p class="tag">Памятник архитектуры</p>
+                  <p>user@user.ru</p>
+                </div>
+                <div>
+                  <span class="stars">&starf;&starf;&starf;&starf;&starf;</span>
+                  (5)
+                  <p class="secondary">Район Оренбургской области</p>
+                </div>
+                <div class="flex-btw">
+                  <span>12 фото</span>
+                  <div><button class="btn">Подробнее</button></div>
+                </div>
+              </div>
+            </div>
+            <div class="popular-item">
+              <img src="../img/orig.jpg" alt="" />
+
+              <div class="item-text">
+                <div>
+                  <h2>Название</h2>
+                  <p class="tag">Памятник архитектуры</p>
+                  <p>user@user.ru</p>
+                </div>
+                <div>
+                  <span class="stars">&starf;&starf;&starf;&starf;&starf;</span>
+                  (5)
+                  <p class="secondary">Район Оренбургской области</p>
+                </div>
+                <div class="flex-btw">
+                  <span>12 фото</span>
+                  <div><button class="btn">Подробнее</button></div>
+                </div>
+              </div>
+            </div>
+            <div class="popular-item">
+              <img src="../img/orig.jpg" alt="" />
+
+              <div class="item-text">
+                <div>
+                  <h2>Название</h2>
+                  <p class="tag">Памятник архитектуры</p>
+                  <p>user@user.ru</p>
+                </div>
+                <div>
+                  <span class="stars">&starf;&starf;&starf;&starf;&starf;</span>
+                  (5)
+                  <p class="secondary">Район Оренбургской области</p>
+                </div>
+                <div class="flex-btw">
+                  <span>12 фото</span>
+                  <div><button class="btn">Подробнее</button></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer id="footer">
+        <div class="container">
+          <div class="logo"><img src="../img/logo.png" alt="" /></div>
+          <div class="footer-menu">
+            <nav>
+              <ul>
+                <li><a href="./index.html">главная</a></li>
+                <li><a href="./login.html">вход</a></li>
+                <li><a href="./register.html">регистрация</a></li>
+                <li><a href="./profile.html">личный кабинет</a></li>
+                <li>
+                  <a href="./catalog.html">каталог достопримечательностей</a>
+                </li>
+                <li>
+                  <a href="./landmark.html">страница достопримечательности</a>
+                </li>
+                <li><a href="./admin.html">административная панель</a></li>
+                <li>
+                  <a href="./index_dark.html">главная - тёмная тема</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="contacts">
+              <h2>Свяжитесь с нами</h2>
+              <p>
+                <strong>Телефон:</strong>
+                <a href="tel:+78007654321">8-800-765-43-21</a>
+              </p>
+              <a href="mailto:info@orenlandmarks.ru">info@orenlandmarks.ru</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

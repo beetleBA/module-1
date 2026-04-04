@@ -1,0 +1,28 @@
+.container-center {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.container-center form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: min(350px, 80vw);
+}
+.container-center form a {
+  text-align: right;
+}
+.error-text {
+  color: brown;
+}
+.error-field {
+  border: 1px solid brown;
+}
+.succ-alert {
+  background-color: #c6ff07;
+  color: #303f00;
+  padding: 15px 1rem;
+  border-radius: var(--border-radius-15);
+}

@@ -10,7 +10,7 @@
   <body>
     <header>
       <div class="container">
-        <div id="logo"><strong>ЛОГО</strong></div>
+        <div id="logo" class="logo"><img src="./img/logo.png" alt="" /></div>
         <div id="main-nav">
           <input type="checkbox" name="burger" id="burger" />
           <label for="burger" class="burger-icon">
@@ -21,23 +21,26 @@
           <nav>
             <ul>
               <li id="go-to-serach">
-                <a href="">Поиск достопримечательностей</a>
+                <a href="">Поиск</a>
               </li>
               <li id="nav-catalog">
-                <a href="">Каталог достопримечательностей</a>
+                <a href="">Каталог</a>
               </li>
               <li id="nav-profile"><a href="">Личный кабинет</a></li>
-              <li id="nav-login">
-                <a href=""><button class="btn">Войти</button></a>
-              </li>
-              <li id="nav-register">
-                <a href=""><button class="btn-accent">Регистрация</button></a>
+              <li>
+                <form>
+                  <button id="nav-login" class="btn" formaction="./html/login.html">Войти</button>
+                  <button class="btn-accent" id="nav-register" formaction="./html/register.html">
+                    Регистрация
+                  </button>
+                </form>
               </li>
             </ul>
           </nav>
         </div>
       </div>
     </header>
+
     <main>
       <section id="search-section">
         <div class="container">
@@ -82,70 +85,106 @@
       <section id="popular-section">
         <div class="container">
           <h1>Популярные достопримечательности</h1>
-          <div class="popular-items">
-            <div class="popular-item" id="landmark-card">
+          <div class="popular-items" id="landmark-card">
+            <div class="popular-item">
               <img src="./img/orig.jpg" alt="" />
-              <h2>Название</h2>
-              <p class="secondary">Памятник архитектуры</p>
-              <p>Автор публикации</p>
-              <div class="stars">
-                &starf;&starf;&starf; <span class="secondary">(4)</span>
+
+              <div class="item-text">
+                <div>
+                  <h2>Название</h2>
+                  <p class="tag">Памятник архитектуры</p>
+                  <p>user@user.ru</p>
+                </div>
+                <div>
+                  <span class="stars">&starf;&starf;&starf;&starf;&starf;</span>
+                  (5)
+                  <p class="secondary">Район Оренбургской области</p>
+                </div>
+                <div class="flex-btw">
+                  <span>12 фото</span>
+                  <div><button class="btn">Подробнее</button></div>
+                </div>
               </div>
-              <p>Количество загруженных фотографий</p>
-              <p>
-                Район Оренбургской области (<span class="secondary"
-                  >широта и долгота</span
-                >)
-              </p>
-              <div><button class="btn">Подробнее</button></div>
             </div>
-            <div class="popular-item" id="landmark-card">
+            <div class="popular-item">
               <img src="./img/orig.jpg" alt="" />
-              <h2>Название</h2>
-              <p class="secondary">Памятник архитектуры</p>
-              <p>Автор публикации</p>
-              <div class="stars">
-                &starf;&starf;&starf; <span class="secondary">(4)</span>
+
+              <div class="item-text">
+                <div>
+                  <h2>Название</h2>
+                  <p class="tag">Памятник архитектуры</p>
+                  <p>user@user.ru</p>
+                </div>
+                <div>
+                  <span class="stars">&starf;&starf;&starf;&starf;&starf;</span>
+                  (5)
+                  <p class="secondary">Район Оренбургской области</p>
+                </div>
+                <div class="flex-btw">
+                  <span>12 фото</span>
+                  <div><button class="btn">Подробнее</button></div>
+                </div>
               </div>
-              <p>Количество загруженных фотографий</p>
-              <p>
-                Район Оренбургской области (<span class="secondary"
-                  >широта и долгота</span
-                >)
-              </p>
-              <div><button class="btn">Подробнее</button></div>
             </div>
-            <div class="popular-item" id="landmark-card">
+            <div class="popular-item">
               <img src="./img/orig.jpg" alt="" />
-              <h2>Название</h2>
-              <p class="secondary">Памятник архитектуры</p>
-              <p>Автор публикации</p>
-              <div class="stars">
-                &starf;&starf;&starf; <span class="secondary">(4)</span>
+
+              <div class="item-text">
+                <div>
+                  <h2>Название</h2>
+                  <p class="tag">Памятник архитектуры</p>
+                  <p>user@user.ru</p>
+                </div>
+                <div>
+                  <span class="stars">&starf;&starf;&starf;&starf;&starf;</span>
+                  (5)
+                  <p class="secondary">Район Оренбургской области</p>
+                </div>
+                <div class="flex-btw">
+                  <span>12 фото</span>
+                  <div><button class="btn">Подробнее</button></div>
+                </div>
               </div>
-              <p>Количество загруженных фотографий</p>
-              <p>
-                Район Оренбургской области (<span class="secondary"
-                  >широта и долгота</span
-                >)
-              </p>
-              <div><button class="btn">Подробнее</button></div>
             </div>
-            <div class="popular-item" id="landmark-card">
+            <div class="popular-item">
               <img src="./img/orig.jpg" alt="" />
-              <h2>Название</h2>
-              <p class="secondary">Памятник архитектуры</p>
-              <p>Автор публикации</p>
-              <div class="stars">
-                &starf;&starf;&starf; <span class="secondary">(4)</span>
+
+              <div class="item-text">
+                <div>
+                  <h2>Название</h2>
+                  <p class="tag">Памятник архитектуры</p>
+                  <p>user@user.ru</p>
+                </div>
+                <div>
+                  <span class="stars">&starf;&starf;&starf;&starf;&starf;</span>
+                  (5)
+                  <p class="secondary">Район Оренбургской области</p>
+                </div>
+                <div class="flex-btw">
+                  <span>12 фото</span>
+                  <div><button class="btn">Подробнее</button></div>
+                </div>
               </div>
-              <p>Количество загруженных фотографий</p>
-              <p>
-                Район Оренбургской области (<span class="secondary"
-                  >широта и долгота</span
-                >)
-              </p>
-              <div><button class="btn">Подробнее</button></div>
+            </div>
+            <div class="popular-item">
+              <img src="./img/orig.jpg" alt="" />
+
+              <div class="item-text">
+                <div>
+                  <h2>Название</h2>
+                  <p class="tag">Памятник архитектуры</p>
+                  <p>user@user.ru</p>
+                </div>
+                <div>
+                  <span class="stars">&starf;&starf;&starf;&starf;&starf;</span>
+                  (5)
+                  <p class="secondary">Район Оренбургской области</p>
+                </div>
+                <div class="flex-btw">
+                  <span>12 фото</span>
+                  <div><button class="btn">Подробнее</button></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -160,7 +199,11 @@
             <div class="slide">
               <img src="./img/orig.jpg" alt="" />
               <div class="sld-text">
-                <p>text</p>
+                <h2>Название</h2>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Veniam, eum!
+                </p>
               </div>
             </div>
             <div class="slide">
@@ -185,31 +228,42 @@
       </section>
       <section id="partners-section">
         <div class="container">
-          <p>ПАРТНЕР</p>
-          <p>ПАРТНЕР</p>
-          <p>ПАРТНЕР</p>
+          <img src="./img/logo.png" alt="" />
+          <img src="./img/logo.png" alt="" />
+          <img src="./img/logo.png" alt="" />
         </div>
       </section>
     </main>
     <footer id="footer">
       <div class="container">
-        <h1><strong>ЛОГО</strong></h1>
+        <div class="logo"><img src="./img/logo.png" alt="" /></div>
         <div class="footer-menu">
           <nav>
             <ul>
-              <li><a href="">главная</a></li>
-              <li><a href="">вход</a></li>
-              <li><a href="">регистрация</a></li>
-              <li><a href="">личный кабинет</a></li>
-              <li><a href="">каталог достопримечательностей</a></li>
-              <li><a href="">страница достопримечательности</a></li>
-              <li><a href="">административная панель</a></li>
-              <li><a href="">главная - тёмная тема</a></li>
+              <li><a href="./html/index.html">главная</a></li>
+              <li><a href="./html/login.html">вход</a></li>
+              <li><a href="./html/register.html">регистрация</a></li>
+              <li><a href="./html/profile.html">личный кабинет</a></li>
+              <li>
+                <a href="./html/catalog.html">каталог достопримечательностей</a>
+              </li>
+              <li>
+                <a href="./html/landmark.html"
+                  >страница достопримечательности</a
+                >
+              </li>
+              <li><a href="./html/admin.html">административная панель</a></li>
+              <li>
+                <a href="./html/index_dark.html">главная - тёмная тема</a>
+              </li>
             </ul>
           </nav>
           <div class="contacts">
             <h2>Свяжитесь с нами</h2>
-            <a href="tel:+78007654321">8-800-765-43-21</a>
+            <p>
+              <strong>Телефон:</strong>
+              <a href="tel:+78007654321">8-800-765-43-21</a>
+            </p>
             <a href="mailto:info@orenlandmarks.ru">info@orenlandmarks.ru</a>
           </div>
         </div>
