@@ -1,7 +1,7 @@
 @import url(./index.css);
 @import url(./auth.css);
 @import url(./profile.css);
-:root {
+[data-theme="light"] {
   /* Цвета */
   --color-bg: #f7f7f7;
   --color-accent: #ffdd81;
