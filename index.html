@@ -3,41 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Главная страница</title>
+    <title>Document</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
     <header>
       <div class="container">
-        <div id="logo">LOGO</div>
+        <div id="logo"><strong>ЛОГО</strong></div>
         <div id="main-nav">
           <input type="checkbox" name="burger" id="burger" />
-          <label for="burger">
+          <label for="burger" class="burger-icon">
             <span></span>
             <span></span>
             <span></span>
           </label>
           <nav>
             <ul>
-              <li id="go-to-search">
-                <a href="#go-to-search">Поиск достопримечательностей</a>
-              </li>
-              <li id="nav-profile">
-                <a href="./html/profile.html">Личный кабинет</a>
+              <li id="go-to-serach">
+                <a href="">Поиск достопримечательностей</a>
               </li>
               <li id="nav-catalog">
-                <a href="./html/catalog.html">Каталог достопримечательностей</a>
+                <a href="">Каталог достопримечательностей</a>
               </li>
+              <li id="nav-profile"><a href="">Личный кабинет</a></li>
               <li id="nav-login">
-                <a href="/login">
-                  <button>Войти</button>
-                </a>
+                <a href=""><button class="btn">Войти</button></a>
               </li>
               <li id="nav-register">
-                <a href="/register">
-                  <button class="btn-main">Регистрация</button>
-                </a>
+                <a href=""><button class="btn-accent">Регистрация</button></a>
               </li>
             </ul>
           </nav>
@@ -47,130 +41,179 @@
     <main>
       <section id="search-section">
         <div class="container">
-          <form action="">
-            <input
-              type="search"
-              name="search-input"
-              id="search-input"
-              placeholder="Памятники архитектуры"
-            />
-            <button id="search-button" class="btn-main">Найти</button>
-          </form>
+          <div class="search-container">
+            <h1>Быстрый поиск по категориям</h1>
+
+            <div class="search-form">
+              <input
+                type="search"
+                name="search-input"
+                id="search-input"
+                placeholder="Памятники архитектуры, Природные объекты..."
+              />
+              <button class="btn-accent" id="search-button">Найти</button>
+            </div>
+          </div>
         </div>
       </section>
       <section id="advantages-section">
         <div class="container">
           <h1>Преимущества платформы</h1>
-          <ul>
-            <li>Удобная загрузка фотографий</li>
-            <li>Точные координаты на карте</li>
-            <li>Подробные описания от местных жителей</li>
-            <li>Актуальная информация и отзывы путешественников</li>
-          </ul>
+          <div class="advantages-items">
+            <div class="advantages-item">
+              <h2>01</h2>
+              <p>Удобная загрузка фотографий</p>
+            </div>
+            <div class="advantages-item">
+              <h2>02</h2>
+              <p>Точные координаты на карте</p>
+            </div>
+            <div class="advantages-item">
+              <h2>03</h2>
+              <p>Подробные описания от местных жителей</p>
+            </div>
+            <div class="advantages-item">
+              <h2>04</h2>
+              <p>Актуальная информация и отзывы путешественников</p>
+            </div>
+          </div>
         </div>
       </section>
       <section id="popular-section">
         <div class="container">
           <h1>Популярные достопримечательности</h1>
-          <div class="popular-grid">
-            <div class="landmark-card">
-              <div class=""><img src="./img/orig.jpg" alt="" /></div>
+          <div class="popular-items">
+            <div class="popular-item" id="landmark-card">
+              <img src="./img/orig.jpg" alt="" />
               <h2>Название</h2>
               <p class="secondary">Памятник архитектуры</p>
-              <p>Автор 1</p>
-              <div class="star">
+              <p>Автор публикации</p>
+              <div class="stars">
                 &starf;&starf;&starf; <span class="secondary">(4)</span>
               </div>
-              <a href="./html/landmark.html">
-                <button class="btn-main">Подробнее</button>
-              </a>
+              <p>Количество загруженных фотографий</p>
+              <p>
+                Район Оренбургской области (<span class="secondary"
+                  >широта и долгота</span
+                >)
+              </p>
+              <div><button class="btn">Подробнее</button></div>
             </div>
-            <div class="landmark-card">
-              <div class=""><img src="./img/orig.jpg" alt="" /></div>
+            <div class="popular-item" id="landmark-card">
+              <img src="./img/orig.jpg" alt="" />
               <h2>Название</h2>
               <p class="secondary">Памятник архитектуры</p>
-              <p>Автор 1</p>
-              <div class="star">
+              <p>Автор публикации</p>
+              <div class="stars">
                 &starf;&starf;&starf; <span class="secondary">(4)</span>
               </div>
-              <a href="./html/landmark.html">
-                <button class="btn-main">Подробнее</button>
-              </a>
+              <p>Количество загруженных фотографий</p>
+              <p>
+                Район Оренбургской области (<span class="secondary"
+                  >широта и долгота</span
+                >)
+              </p>
+              <div><button class="btn">Подробнее</button></div>
             </div>
-            <div class="landmark-card">
-              <div class=""><img src="./img/orig.jpg" alt="" /></div>
+            <div class="popular-item" id="landmark-card">
+              <img src="./img/orig.jpg" alt="" />
               <h2>Название</h2>
               <p class="secondary">Памятник архитектуры</p>
-              <p>Автор 1</p>
-              <div class="star">
+              <p>Автор публикации</p>
+              <div class="stars">
                 &starf;&starf;&starf; <span class="secondary">(4)</span>
               </div>
-              <a href="./html/landmark.html">
-                <button class="btn-main">Подробнее</button>
-              </a>
+              <p>Количество загруженных фотографий</p>
+              <p>
+                Район Оренбургской области (<span class="secondary"
+                  >широта и долгота</span
+                >)
+              </p>
+              <div><button class="btn">Подробнее</button></div>
             </div>
-            <div class="landmark-card">
-              <div class=""><img src="./img/orig.jpg" alt="" /></div>
+            <div class="popular-item" id="landmark-card">
+              <img src="./img/orig.jpg" alt="" />
               <h2>Название</h2>
               <p class="secondary">Памятник архитектуры</p>
-              <p>Автор 1</p>
-              <div class="star">
+              <p>Автор публикации</p>
+              <div class="stars">
                 &starf;&starf;&starf; <span class="secondary">(4)</span>
               </div>
-              <a href="./html/landmark.html">
-                <button class="btn-main">Подробнее</button>
-              </a>
-            </div>
-            <div class="landmark-card">
-              <div class=""><img src="./img/orig.jpg" alt="" /></div>
-              <h2>Название</h2>
-              <p class="secondary">Памятник архитектуры</p>
-              <p>Автор 1</p>
-              <div class="star">
-                &starf;&starf;&starf; <span class="secondary">(4)</span>
-              </div>
-              <a href="./html/landmark.html">
-                <button class="btn-main">Подробнее</button>
-              </a>
+              <p>Количество загруженных фотографий</p>
+              <p>
+                Район Оренбургской области (<span class="secondary"
+                  >широта и долгота</span
+                >)
+              </p>
+              <div><button class="btn">Подробнее</button></div>
             </div>
           </div>
         </div>
       </section>
       <section id="slider-section">
-        <div class="">
-          <div class="slider">
-            <input type="radio" name="sld" id="s1" checked />
-            <input type="radio" name="sld" id="s2" />
-            <input type="radio" name="sld" id="s3" />
-            <div class="slides">
-              <div class="slide">
-                <img src="./img/orig.jpg" alt="" />
-                <div class="text">
-                  <h1>Текст</h1>
-                </div>
-              </div>
-              <div class="slide">
-                <img src="./img/orig.jpg" alt="" />
-                <div class="text">
-                  <h1>Текст</h1>
-                </div>
-              </div>
-              <div class="slide">
-                <img src="./img/orig.jpg" alt="" />
-                <div class="text">
-                  <h1>Текст</h1>
-                </div>
+        <div class="slider">
+          <input type="radio" name="sld" id="s1" checked />
+          <input type="radio" name="sld" id="s2" />
+          <input type="radio" name="sld" id="s3" />
+
+          <div class="slides">
+            <div class="slide">
+              <img src="./img/orig.jpg" alt="" />
+              <div class="sld-text">
+                <p>text</p>
               </div>
             </div>
-            <div class="nav">
-              <label for="s1"></label>
-              <label for="s2"></label>
-              <label for="s3"></label>
+            <div class="slide">
+              <img src="./img/orig.jpg" alt="" />
+              <div class="sld-text">
+                <p>text 2</p>
+              </div>
             </div>
+            <div class="slide">
+              <img src="./img/orig.jpg" alt="" />
+              <div class="sld-text">
+                <p>text 3</p>
+              </div>
+            </div>
+          </div>
+          <div class="sld-nav">
+            <label for="s1"></label>
+            <label for="s2"></label>
+            <label for="s3"></label>
           </div>
         </div>
       </section>
+      <section id="partners-section">
+        <div class="container">
+          <p>ПАРТНЕР</p>
+          <p>ПАРТНЕР</p>
+          <p>ПАРТНЕР</p>
+        </div>
+      </section>
     </main>
-    <footer></footer>
+    <footer id="footer">
+      <div class="container">
+        <h1><strong>ЛОГО</strong></h1>
+        <div class="footer-menu">
+          <nav>
+            <ul>
+              <li><a href="">главная</a></li>
+              <li><a href="">вход</a></li>
+              <li><a href="">регистрация</a></li>
+              <li><a href="">личный кабинет</a></li>
+              <li><a href="">каталог достопримечательностей</a></li>
+              <li><a href="">страница достопримечательности</a></li>
+              <li><a href="">административная панель</a></li>
+              <li><a href="">главная - тёмная тема</a></li>
+            </ul>
+          </nav>
+          <div class="contacts">
+            <h2>Свяжитесь с нами</h2>
+            <a href="tel:+78007654321">8-800-765-43-21</a>
+            <a href="mailto:info@orenlandmarks.ru">info@orenlandmarks.ru</a>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
